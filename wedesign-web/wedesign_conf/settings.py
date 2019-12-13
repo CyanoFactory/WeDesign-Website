@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'registration',
+    'wedesign-web',
 
     'crispy_forms',
     'wedesign'
@@ -48,7 +49,7 @@ ROOT_URLCONF = 'wedesign_conf.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "wedesign/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
