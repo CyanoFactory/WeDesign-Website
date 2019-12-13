@@ -1,0 +1,58 @@
+{% extends "wedesign/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% comment %}
+Copyright (c) 2019 Gabriel Kind
+Hochschule Mittweida, University of Applied Sciences
+
+Released under the MIT license
+{% endcomment %}
+
+{% block head_title %}{{ block.super }} :: Login{% endblock %}
+{% block page_title %}Login{% endblock %}
+{% block action_icons %}{% endblock %}
+
+{% block extrastyles %}
+
+#login tr:last-child td{
+	padding-top:12px;
+	text-align:right;
+}
+.leftfloat {
+  float: left;
+}
+{% endblock %}
+
+{% block content %}
+<form id="login" method="post" action="{% url "login" %}">
+{% csrf_token %}
+
+{% if message %}
+<div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    {{ message }}
+</div>
+{% endif %}
+
+<div class="alert alert-info" role="alert">
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        <span class="sr-only">Info:</span>The way how to log in changed! You can now specify username <b>or</b> mail address.
+</div>
+
+<div class="col-md-6">
+
+{{ form|crispy }}
+
+<input type="hidden" name="next" value="{{ next }}" />
+<div class="control-group pull-right">
+    <div class="controls controls-row">
+        <a class="btn-link" href="{% url 'password_reset' %}">Forgot your password?</a>
+    </div>
+</div>
+
+<button type="submit" value=" Send" class="btn btn-primary" id="submit">Login</button>
+</div>
+</form>
+{% endblock %}

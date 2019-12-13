@@ -1,0 +1,26 @@
+{% extends "wedesign/base.html" %}
+
+{% comment %}
+Copyright (c) 2019 Gabriel Kind
+Hochschule Mittweida, University of Applied Sciences
+
+Released under the MIT license
+{% endcomment %}
+
+
+{% block head_title %}{{ block.super }} :: Logout{% endblock %}
+{% block page_title %}Logout{% endblock %}
+{% block action_icons %}{% endblock %}
+
+
+{% block head %}
+{{ block.super }}
+<meta http-equiv="refresh" content="1; URL={% url "wedesign:index" %}">
+
+{% endblock %}
+
+{% block content %}
+<div class="col-md-6">
+You have successfully logged out.
+</div>
+{% endblock %}

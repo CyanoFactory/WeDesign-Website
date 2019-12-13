@@ -1,0 +1,8 @@
+venv/
+.idea/
+settings_private.py
+__pycache__/
+/wedesign-web/static/
+*.sqlite*
+*.d.ts
+*.map

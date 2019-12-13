@@ -1,0 +1,26 @@
+{% extends "wedesign/base.html" %}
+
+{% comment %}
+Copyright (c) 2019 Gabriel Kind
+Hochschule Mittweida, University of Applied Sciences
+
+Released under the MIT license
+{% endcomment %}
+
+{% load crispy_forms_tags %}
+
+{% block head_title %}{{ block.super }} :: Create new account{% endblock %}
+{% block page_title %}Create new account{% endblock %}
+{% block action_icons %}{% endblock %}
+
+{% block content %}
+
+<form method="post">{% csrf_token %}
+<div class="col-md-6">
+
+{% crispy form %}
+
+</div>
+</form>
+
+{% endblock %}
