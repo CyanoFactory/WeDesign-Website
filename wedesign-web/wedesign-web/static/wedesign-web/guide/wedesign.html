@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>wedesign.txt</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<div class="section" id="genome-scale-metabolic-modelling-with-wedesign-web-tool">
+<h1><a class="toc-backref" href="#id5">Genome-scale metabolic modelling with WeDesign web tool</a></h1>
+<img alt="img/title.png" class="align-center" src="img/title.png" />
+</div>
+<div class="section" id="table-of-contents">
+<h1><a class="toc-backref" href="#id6">Table of Contents</a></h1>
+<p>WeDesign is an online tool to carry out genome-scale metabolic analysis of several organisms. In this guide its main features will be explained.</p>
+<div class="contents topic" id="id1">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#genome-scale-metabolic-modelling-with-wedesign-web-tool" id="id5">Genome-scale metabolic modelling with WeDesign web tool</a></li>
+<li><a class="reference internal" href="#table-of-contents" id="id6">Table of Contents</a></li>
+<li><a class="reference internal" href="#introduction-to-wedesign" id="id7">Introduction to WeDesign</a><ul>
+<li><a class="reference internal" href="#guests" id="id8">Guests</a></li>
+<li><a class="reference internal" href="#registered-user" id="id9">Registered User</a></li>
+<li><a class="reference internal" href="#both" id="id10">Both</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-a-model" id="id11">Working with a model</a><ul>
+<li><a class="reference internal" href="#reactions" id="id12">Reactions</a><ul>
+<li><a class="reference internal" href="#creating-editing-reactions" id="id13">Creating/Editing reactions</a></li>
+<li><a class="reference internal" href="#batch-creating-of-reactions" id="id14">Batch creating of reactions</a></li>
+<li><a class="reference internal" href="#filter" id="id15">Filter</a></li>
+<li><a class="reference internal" href="#search-function" id="id16">Search function</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#metabolites" id="id17">Metabolites</a><ul>
+<li><a class="reference internal" href="#id2" id="id18">Filter</a></li>
+<li><a class="reference internal" href="#id3" id="id19">Search function</a></li>
+<li><a class="reference internal" href="#creating-editing-metabolites" id="id20">Creating/Editing metabolites</a></li>
+<li><a class="reference internal" href="#deleting-metabolites" id="id21">Deleting metabolites</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#settings-and-simulation" id="id22">Settings and Simulation</a><ul>
+<li><a class="reference internal" href="#flux-balance-analysis-fba" id="id23">Flux Balance Analysis (FBA)</a></li>
+<li><a class="reference internal" href="#metabolic-burden-analysis-mba" id="id24">Metabolic Burden Analysis (MBA)</a></li>
+<li><a class="reference internal" href="#sensitivity-analysis-sa" id="id25">Sensitivity Analysis (SA)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#case-study" id="id26">Case Study</a><ul>
+<li><a class="reference internal" href="#toy-model" id="id27">Toy Model</a><ul>
+<li><a class="reference internal" href="#introduction" id="id28">Introduction</a></li>
+<li><a class="reference internal" href="#optimisation-of-one-metabolite-production" id="id29">Optimisation of one metabolite production</a></li>
+<li><a class="reference internal" href="#optimisation-of-the-production-of-two-metabolites" id="id30">Optimisation of the production of two metabolites</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#isyn811-model" id="id31">iSyn811 model</a><ul>
+<li><a class="reference internal" href="#id4" id="id32">Introduction</a></li>
+<li><a class="reference internal" href="#simulation-of-several-growing-conditions" id="id33">Simulation of several growing conditions</a></li>
+<li><a class="reference internal" href="#maximisation-of-autotrophic-hydrogen-production-with-different-nitrogen-sources" id="id34">Maximisation of autotrophic hydrogen production with different nitrogen sources</a></li>
+<li><a class="reference internal" href="#compatible-solutes-case-study" id="id35">Compatible solutes case study</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="introduction-to-wedesign">
+<h1><a class="toc-backref" href="#id7">Introduction to WeDesign</a></h1>
+<div class="section" id="guests">
+<h2><a class="toc-backref" href="#id8">Guests</a></h2>
+<p>If you are a guest you will see a listing of models and a notification that permanent changes to a model are not possible.</p>
+<img alt="img/index.png" src="img/index.png" />
+</div>
+<div class="section" id="registered-user">
+<h2><a class="toc-backref" href="#id9">Registered User</a></h2>
+<p>If you are a registered user you will see an empty listing instead. To add your first model select &quot;Create new model&quot; and a dropdown menu will offer two options: &quot;Upload your own model&quot; and &quot;Create from template&quot;. Here you can either add from a template (these are the same models offered to guest users) or upload your own BioOpt or SBML file.</p>
+<img alt="img/new_model.png" src="img/new_model.png" />
+<img alt="img/new_model_template.png" src="img/new_model_template.png" />
+<p>After adding the new model the table will contain your new model.</p>
+</div>
+<div class="section" id="both">
+<h2><a class="toc-backref" href="#id10">Both</a></h2>
+<p>For each model in the list four different actions are possible:</p>
+<blockquote>
+<ul class="simple">
+<li>Edit (Click the name of the model)</li>
+<li>View Revisions</li>
+<li>Export Model</li>
+<li>Delete Model (Registered only)</li>
+</ul>
+</blockquote>
+<p>For &quot;Edit&quot; see &quot;Working with a model&quot;.</p>
+<p>Revisions: WeDesign keeps old versions of each model when the model is saved while in edit mode. In the Revision view you can edit older versions of the model and rollback to these versions by using the save button. The changes (&quot;Show changes&quot;) is autogenerated based on the changes between the versions and can be inaccurate.</p>
+<img alt="img/history.png" src="img/history.png" />
+<p>Export Model: This exports the model either in BioOpt or in SBML format. ''Note:'' Because WeDesign applies internal processing to the model the exported file can differ significantly from the uploaded model.</p>
+<p>Delete Model: This deletes the model. This action is not reversable, WeDesign won't keep any data related to the model.</p>
+</div>
+</div>
+<div class="section" id="working-with-a-model">
+<h1><a class="toc-backref" href="#id11">Working with a model</a></h1>
+<p>After the initial loading sequence the model is displayed in a table similiar to the model overview.</p>
+<p>For this guide we will use &quot;iSyn811&quot; as an example.</p>
+<p>The model editor provides four different views: Reactions, Metabolites, Settings and Simulation.</p>
+<blockquote>
+<ul class="simple">
+<li>Reactions lists all the reactions available in the model.</li>
+<li>Metabolites lists all metabolites available in the model</li>
+<li>Settings allows to alter the way how simulations are executed</li>
+<li>Simulation starts simulations on the current model based on the specified settings</li>
+</ul>
+</blockquote>
+<img alt="img/isyn811.png" src="img/isyn811.png" />
+<div class="section" id="reactions">
+<h2><a class="toc-backref" href="#id12">Reactions</a></h2>
+<p>Lets take a look at the reaction 2.7.1.2a of the iSyn811 model. You can use the search box to find it easier because all reactions are sorted alphabetically in the table.</p>
+<img alt="img/isyn_filter.png" src="img/isyn_filter.png" />
+<p>The 1st column contains the reaction name: This is the identifier for the reaction, for iSyn811 these are in most cases the corresponding EC number. Other models use other conventions. When you click the name a reaction editor opens. The reaction editor is explained #below.</p>
+<dl class="docutils">
+<dt>The 2nd column contains a representation of the chemical reaction:</dt>
+<dd><ul class="first last simple">
+<li>The substrates are left of the arrow and are the reactive compounds to be transformed, including the stoichiometry coefficient.</li>
+<li>The products are right of the arrow and are the Compounds obtained in the reaction.</li>
+<li>Reversibility: One arrow implies substrates to be transformed into products, but two arrows mean that substrates and products can be created from each other.</li>
+</ul>
+</dd>
+</dl>
+<p>The 3rd column shows the flux constraints: This range indicates the flux restriction in terms of the minimum and maximum value allowed for each flux (For iSyn811 the units are  mmol·gDW-1·h-1, with the exception of biomass formation, which is expressed in h-1).</p>
+<dl class="docutils">
+<dt>As it appears in Figure 5, fluxes can be either:</dt>
+<dd><ul class="first last simple">
+<li>unconstrained, being allowed to take any flux value [-∞,∞] (Protons),</li>
+<li>restricted to no flux [0,0] or equivalently as unselected reaction by unticking it (Urea),</li>
+<li>allowed to a specific range of fluxes for reversible reactions [-104,104] (Sulfate),</li>
+<li>allowed to a specific range of fluxes for non-reversible reactions [0,1000] (Nitrate),</li>
+<li>fixed to a given value [10,10] (Ammonia).</li>
+</ul>
+</dd>
+</dl>
+<p>Note that a flux restrictions range of e.g. [-10, 20] implies that the reaction can happen in the direction of substrates to products with a maximum flux of 20 units while the conversion of the products into substrates just with a maximum flux of 10. This restriction allows any flux value within the imposed range, including a net flux of zero units, which in that case would mean that the conversion of substrates into products and vice versa occur at the same rate. The final value for each reaction flux will be finally determined by the simulation.</p>
+<p>The 4th column shows a checkbox icon which allows to enable or disable this reaction (knockin/-out). This is equivalent to restricting a flux to [0, 0]</p>
+<p>The 5th column allows you to delete a specific reaction. This operation can not be reversed, use the knockout function to temporarely disable reactions. When you select delete you are asked if you want to remove unused metabolites. Not removing the metabolites has no side-effect on the simulation, it is just for keeping the metabolite list clean.</p>
+<div class="section" id="creating-editing-reactions">
+<h3><a class="toc-backref" href="#id13">Creating/Editing reactions</a></h3>
+<p>When you select &quot;Create New Reaction&quot; or click on a reaction name in the table an editor window opens.</p>
+<img alt="img/edit_reaction.png" src="img/edit_reaction.png" />
+<p>WeDesign allows modifying the name of the reaction, the stoichiometry coefficients of each substrate and product, adding or deleting of compounds, marking the reaction as reversible or including its flux constraint. Simply start typing into the substrates/products text field and CyanoFactory will suggest metabolites based on your input. To change the coefficients click on the metabolite.</p>
+<p>Creating of new metabolites is not possible in this view. You have to create them with &quot;
+&quot;#Create Metabolite&quot; beforehand.</p>
+<p>For creating multiple reactions at once we recommend using the &quot;Batch create&quot; functionality described below.</p>
+</div>
+<div class="section" id="batch-creating-of-reactions">
+<h3><a class="toc-backref" href="#id14">Batch creating of reactions</a></h3>
+<p>To reach this function click on the arrow next to &quot;Create reaction&quot; and then &quot;Bulk create reactions&quot;.</p>
+<img alt="img/create_reaction_batch.png" src="img/create_reaction_batch.png" />
+<p>The batch create option allows you to paste reactions in BioOpt format and it will automatically create all reactions and new metabolites for you.</p>
+<dl class="docutils">
+<dt>The BioOpt format is:</dt>
+<dd>reaction name : 2 substrate_1 + substrate_2 -&gt; product_1 + 2 product_2</dd>
+</dl>
+<p>Each line starts with the reaction name followed by a &quot;:&quot;. On the left side of the arrow &quot;-&gt;&quot; you can put substrates delimited by +. In front of the substrates is the quantity which can be omitted for a quantity of &quot;1&quot;. Right to the arrow are the products which follow the same rules as the substrates. To make a reaction reversible use &quot;&lt;-&gt;&quot; as the arrow.</p>
+<p>A summary below the text box will show how WeDesign parsed the string. If the parsing looks correct click &quot;Create reactions&quot; to close the window and return to the editor.</p>
+</div>
+<div class="section" id="filter">
+<h3><a class="toc-backref" href="#id15">Filter</a></h3>
+<dl class="docutils">
+<dt>The reaction list can be filtered using three different predicates:</dt>
+<dd><ul class="first last simple">
+<li>Active/Inactive: Only show reactions that are enabled/disabled</li>
+<li>Constraint/Unconstrained: Only show reactions whose fluxes are constraint or unconstrained.</li>
+<li>Reversible/Irreversible: Only show reactions that are reversible (&lt;-&gt;) or irreversible (-&gt;)</li>
+</ul>
+</dd>
+</dl>
+<img alt="img/reaction_filter.png" src="img/reaction_filter.png" />
+</div>
+<div class="section" id="search-function">
+<h3><a class="toc-backref" href="#id16">Search function</a></h3>
+<p>The search function does a full text search over the whole reaction (including metabolites) and allows filtering of entries which contain the provided text.</p>
+<p>For more advanced searching and filtering enable &quot;Search with RegExp&quot; which will find entries based on whether a regular expression matches. Please consult a guide about regular expressions for usage.</p>
+</div>
+</div>
+<div class="section" id="metabolites">
+<h2><a class="toc-backref" href="#id17">Metabolites</a></h2>
+<p>This view lists all metabolites that are used in the reactions. Here you can rename metabolites or mark them as external by clicking the checkbox in the 4nd column.</p>
+<p>The 2nd and the 3rd column show in which reactions the metabolites are consumed as a substrate or produced as a product. You can click the reaction names to open the reaction editor directly.</p>
+<div class="section" id="id2">
+<h3><a class="toc-backref" href="#id18">Filter</a></h3>
+<p>The metabolite list can be filtered based on &quot;Is internal&quot; and &quot;Is external&quot; and will only show internal or external metabolites respectively.</p>
+<img alt="img/metabolite_filter.png" src="img/metabolite_filter.png" />
+</div>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id19">Search function</a></h3>
+<p>The search function does a full text search over the whole metabolite list and the reaction names in the consumed/produced columns and allows filtering of entries which contain the provided text.</p>
+<p>For more advanced searching and filtering enable &quot;Search with RegExp&quot; which will find entries based on whether a regular expression matches. Please consult a guide about regular expressions for usage.</p>
+</div>
+<div class="section" id="creating-editing-metabolites">
+<h3><a class="toc-backref" href="#id20">Creating/Editing metabolites</a></h3>
+<p>When you select &quot;Create New Metabolite&quot; or click on a metabolite name in the table an editor window opens.</p>
+<img alt="img/create_metabolite.png" src="img/create_metabolite.png" />
+<p>WeDesign allows modifying the name of the metabolite and marking it as external.</p>
+</div>
+<div class="section" id="deleting-metabolites">
+<h3><a class="toc-backref" href="#id21">Deleting metabolites</a></h3>
+<p>Deleting of a metabolite is not possible when a metabolite is in use by a reaction. When metabolites are unused you can click &quot;Delete unused metabolites&quot; to remove all of them at once.</p>
+</div>
+</div>
+<div class="section" id="settings-and-simulation">
+<h2><a class="toc-backref" href="#id22">Settings and Simulation</a></h2>
+<p>After having made all required changes to the model we can proceed with the configuration of the simulation.</p>
+<p>WeDesign permits to simulate through the Flux Balance Analysis method all reaction fluxes in order to maximize or minimize the flux of a specific reaction.</p>
+<dl class="docutils">
+<dt>The tool provides three simulation types:</dt>
+<dd><ul class="first last simple">
+<li>Flux Balance Analysis (FBA)</li>
+<li>Metabolic Burden Analysis (MBA)</li>
+<li>Sensitivity Analysis (SA)</li>
+</ul>
+</dd>
+</dl>
+<p>MBA and SA are two specific applications of FBA and will be explained later.</p>
+<p>For each of these three simulation types a &quot;Main Objective&quot; which is being optimized must be selected. By default this is usually the Growth function.</p>
+<div class="section" id="flux-balance-analysis-fba">
+<h3><a class="toc-backref" href="#id23">Flux Balance Analysis (FBA)</a></h3>
+<p>Flux Balance Analysis will Maximize or Minimize the objective function using linear programming and a graph (reactions as edges, metabolites as nodes) showing the calculated fluxes of all reactions will be displayed.</p>
+<p>Due to the slowness of the graph algorithm the graph will only show the 30 reactions with the highest flux which are connected with the objective. To change this behaviour enable the option &quot;Display selected reactions&quot; and manually pick the reactions you are interested in.</p>
+<img alt="img/toymodel_settings.png" src="img/toymodel_settings.png" />
+</div>
+<div class="section" id="metabolic-burden-analysis-mba">
+<h3><a class="toc-backref" href="#id24">Metabolic Burden Analysis (MBA)</a></h3>
+<img alt="img/toymodel_settings_mba.png" src="img/toymodel_settings_mba.png" />
+</div>
+<div class="section" id="sensitivity-analysis-sa">
+<h3><a class="toc-backref" href="#id25">Sensitivity Analysis (SA)</a></h3>
+<img alt="img/toymodel_settings_sa.png" src="img/toymodel_settings_sa.png" />
+</div>
+</div>
+</div>
+<div class="section" id="case-study">
+<h1><a class="toc-backref" href="#id26">Case Study</a></h1>
+<div class="section" id="toy-model">
+<h2><a class="toc-backref" href="#id27">Toy Model</a></h2>
+<div class="section" id="introduction">
+<h3><a class="toc-backref" href="#id28">Introduction</a></h3>
+<p>This model pretends to be the first hands-on experience to understand and simulate genome-scale metabolic models. The model is fictitious and simple in order to make the whole process easier. It consists of 7 reactions and 8 metabolites, among them being three external ones, which are A(ext), D(ext) and E(ext).</p>
+<img alt="img/toymodel_scheme.png" src="img/toymodel_scheme.png" />
+<dl class="docutils">
+<dt>For selecting the toy model, we:</dt>
+<dd><ul class="first last simple">
+<li>As a guest: Select &quot;Toy Model&quot; from the model list</li>
+<li>As a registred user: Select &quot;Create New Model -&gt; From Template&quot; and choose &quot;Toy Model&quot;.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="optimisation-of-one-metabolite-production">
+<h3><a class="toc-backref" href="#id29">Optimisation of one metabolite production</a></h3>
+<p>We can now simulate the set of fluxes that maximise the output of reaction 5 by increating the production of metabolite D. Please remember that in FBA simulations, there is always the need of a transport reaction that makes an intracellular compound to become extracellular, if you want to optimise its flux.</p>
+<p>For maximising that reaction, we first constrain reaction 1, the uptake reaction for metabolite A, within the flux range [0, 1] and simulate optimising reaction 5, setting this as Main Objective.</p>
+<img alt="img/toymodel_simulation2.png" src="img/toymodel_simulation2.png" />
+<p>The uptake of metabolite E is constrained to [0, 3] units. As we can see in the results image, this uptake flux directly maximises the output of D, so the algorithm takes the maximum flux for E(ext) to maximise D(ext). On the other side A(ext) is also contributing to maximise D(ext), so the maximum allowed metabolite A(ext) uptake flux is used.</p>
+<p>We will repeat the simulation at this moment but changing the maximum flux value for A(ext) uptake from 1 to 10 and simulate again:</p>
+<img alt="img/toymodel_simulation3.png" src="img/toymodel_simulation3.png" />
+<p>The results show that now the main flux contribution to D(ext) comes from the metabolic pathway involving A(ext).</p>
+<p>TASK: Try now to constrain now both A(ext) and E(ext) uptake reactions to 1 unit and analyse the results. If we obviate energetic and kinetic properties, which metabolite is more suitable for producing D in the cell?</p>
+</div>
+<div class="section" id="optimisation-of-the-production-of-two-metabolites">
+<h3><a class="toc-backref" href="#id30">Optimisation of the production of two metabolites</a></h3>
+<p>The next exercise consists of modifying the metabolic network by adding the following reactions:</p>
+<blockquote>
+reac8: E + B -&gt; 2 F
+reac9: F -&gt; F ext</blockquote>
+<p>Use the bulk add functionality to add them quickly.</p>
+<p>We will use now Metabolic Burden Analysis: We will maximise now the flux of F(ext), setting it as Design Objective, by fixing the flux of D(ext) to
+different values: 0, 5, 10, 15 and 20 units (that is D(ext) = [0,0], [5,5]...) and simulate for each of the
+given D(ext) fluxes. For this, you will need to set first the constraints for both uptake reactions
+related to A(ext) and E(ext) to 10 units. After having done these 5 simulations and plotting the results
+of the fluxes for D(ext) and F(ext) together, the following graph can be obtained:</p>
+<p>D(ext) flux
+Figure 13. Results plot for several simulations of D(ext) and F(ext) fluxes
+Do it by yourself and try to understand why when D(ext) flux is equal or greater than 15 units, no
+F(Ext) metabolite can be produced in the cell.</p>
+</div>
+</div>
+<div class="section" id="isyn811-model">
+<h2><a class="toc-backref" href="#id31">iSyn811 model</a></h2>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id32">Introduction</a></h3>
+<p>After having had the first contact with metabolic models, we will go ahead with a genome-scale metabolic model of the cyanobacterium Synechocystis sp. PCC 6803 [Montagud et al., BMC Systems Biology 2010, 4:156], that includes more than 800 metabolic reactions.</p>
+<dl class="docutils">
+<dt>After creating the model from the template or accessing as a guest you can click the &quot;Export&quot; button to download the iSyn811 model as a txt file (you can use this file to upload the model, too). Take a look to its content, specially paying special attention to the metabolic pathways structures. Further it is worth to remark that there are three types of reactions in this model:</dt>
+<dd><ul class="first last simple">
+<li>uptake reactions, which are normally constrained but can be also unconstrained,</li>
+<li>normal metabolic reactions and</li>
+<li>the biomass equation, which is a set of macromolecules that build the cell structure:</li>
+</ul>
+</dd>
+</dl>
+<!-- image: img/isyn811_biomass.png -->
+<p>As it can be seen in the figure, the biomass equation is composed by a selection of building blocks to give one unit of biomass (BM) that is transformed into external biomass, also called cell growth (BM out), by the next reaction in the model. The external metabolites that need to be uptaken for the cell metabolism are easy to find as their corresponding uptake reactions appear just after the biomass equation and all external metabolites are displayed with blue colour in WeDesign.</p>
+<p>The units of this model are the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="18%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>.</td>
+<td>Growth</td>
+<td>Rest of reactions</td>
+</tr>
+<tr><td>FLUX UNITS</td>
+<td>h−1</td>
+<td>mmol ⁄ gDCW · h</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="simulation-of-several-growing-conditions">
+<h3><a class="toc-backref" href="#id33">Simulation of several growing conditions</a></h3>
+<p>For the first exercise we will mainly study the cellular growth at three different growth modes, whose corresponding environmental conditions are given in the table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="20%" />
+<col width="8%" />
+<col width="10%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">.</th>
+<th class="head">.</th>
+<th class="head" colspan="2">HETEROTROPHIC</th>
+<th class="head" colspan="2">AUTOTROPHIC</th>
+<th class="head" colspan="2">MIXOTROPHIC</th>
+</tr>
+<tr><th class="head">.</th>
+<th class="head">Reaction name</th>
+<th class="head">min</th>
+<th class="head">max</th>
+<th class="head">min</th>
+<th class="head">max</th>
+<th class="head">min</th>
+<th class="head">max</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Photon uptake at PSI</td>
+<td>_lightI</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>23.48</td>
+<td>0</td>
+<td>23.48</td>
+</tr>
+<tr><td>Photon uptake at PSII</td>
+<td>_lightII</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>23.48</td>
+<td>0</td>
+<td>23.48</td>
+</tr>
+<tr><td>CO2 uptake</td>
+<td>CO2in</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1.7</td>
+<td>0</td>
+<td>1.7</td>
+</tr>
+<tr><td>H2CO3 uptake</td>
+<td>_H2CO3transport</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1.7</td>
+<td>0</td>
+<td>1.7</td>
+</tr>
+<tr><td>Glucose uptake</td>
+<td>TRANS-RXN59G-152</td>
+<td>0</td>
+<td>0.567</td>
+<td>0</td>
+<td>23.48</td>
+<td>0</td>
+<td>0.567</td>
+</tr>
+<tr><td>Rubisco carboxilase</td>
+<td>4.1.1.39</td>
+<td>0</td>
+<td>0</td>
+<td>unbound</td>
+<td>unbound</td>
+<td>unbound</td>
+<td>unbound</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Initial conditions for growth modes in Synechocystis sp. PCC 6803 glucose tolerant strain</p>
+<p>Try to set the constraints from the table and check the resultant growth (reaction _Growth set as Main objective). Note that the constraints have been adjusted to produce similar growth values in the three different scenarios. The carbon intake is equivalent in terms of C atoms. Also, the amount of photons entering the cell were obtained as the minimum necessary to reduce the carbon intake in the autotrophic scenario [Montagud et al., BMC Systems Biology 2010, 4:156].</p>
+</div>
+<div class="section" id="maximisation-of-autotrophic-hydrogen-production-with-different-nitrogen-sources">
+<h3><a class="toc-backref" href="#id34">Maximisation of autotrophic hydrogen production with different nitrogen sources</a></h3>
+<p>In this case hydrogen will be generated in autotrophic mode, fixing the growth value as the one obtained in the previous exercise simulation for autotrophic mode and setting hydrogen as Main Objective. Four different simulations with four different nitrogen sources will be evaluated:</p>
+<blockquote>
+<ul class="simple">
+<li>Nitrate (standard conditions)</li>
+<li>Nitrite</li>
+<li>Ammonia</li>
+<li>Urea</li>
+</ul>
+</blockquote>
+<p>All constraints are given in the table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="8%" />
+<col width="10%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">.</th>
+<th class="head" colspan="2">NO3</th>
+<th class="head" colspan="2">NO2</th>
+<th class="head" colspan="2">NH4</th>
+<th class="head" colspan="2">urea</th>
+</tr>
+<tr><th class="head">Reaction name</th>
+<th class="head">min</th>
+<th class="head">max</th>
+<th class="head">min</th>
+<th class="head">max</th>
+<th class="head">min</th>
+<th class="head">max</th>
+<th class="head">min</th>
+<th class="head">max</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>nitrate TRANS-RXN59G-237</td>
+<td>-1000</td>
+<td>1000</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td>nitrite TRANS-RXN59G-238</td>
+<td>0</td>
+<td>0</td>
+<td>-1000</td>
+<td>1000</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td>ammonia TRANS-RXN59G-0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td>ammonia TRANS-RXN59G-178</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>-1000</td>
+<td>1000</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td>urea TRANS-RXN59G-410</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>-1000</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+<p>After having done all simulations a similar graph could be obtained:</p>
+<p>Figure 16. Summary results of photohydrogen production in Synechocystis model with different
+nitrogen sources
+Why urea and ammonia allow the cell to produce more hydrogen?</p>
+</div>
+<div class="section" id="compatible-solutes-case-study">
+<h3><a class="toc-backref" href="#id35">Compatible solutes case study</a></h3>
+<p>In the last exercise, the effect of three different compatible solute cases on cell growth will be assessed. Compatible solutes are a functional group of low molecular mass, organic compounds that do not disturb cellular metabolism at the high molar concentrations necessary to equilibrate osmotic
+conditions. So they help protecting the cell from salt stress.</p>
+<p>For solving it, you should add the necessary reactions for each solute case, that is synthesis and transport, and then simulate _Growth as Main Objective and _obj as Design Objective. Note that the reaction _obj has the same structure in all cases, therefore you don’t need to add it each time and
+you can simply modify it, as we saw in the case of the Toy Model. Remember that you should disable the reactions previously added (or constraining them to [0, 0]) to reset the model to the ‘wild type’. The compatible solutes to be studied are Glycine betaine, Trehalose and Octaine. In the case of Trehalose two different pathways can be tried. Below you will find the reactions that are necessary for each simulation.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
