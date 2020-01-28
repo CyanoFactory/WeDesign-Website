@@ -60,14 +60,8 @@ class CreateProfileForm(forms.Form):
         required=True,
         widget=forms.EmailInput,
         label="E-Mail address",
-        max_length=254
-    )
-
-    email2 = forms.EmailField(
-        required=True,
-        widget=forms.EmailInput,
-        label="Confirm E-Mail address",
-        max_length=254
+        max_length=254,
+        help_text="For password recovery. The mail address is not validated"
     )
 
     password = forms.CharField(
@@ -98,7 +92,6 @@ class CreateProfileForm(forms.Form):
                 'Account information',
                 'username',
                 'email',
-                'email2',
                 'password',
                 'password2'
             ),
