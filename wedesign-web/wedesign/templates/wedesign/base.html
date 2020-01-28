@@ -10,14 +10,17 @@ Released under the MIT license
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE|default:"en-us" }}" xml:lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
 {% load static %}
 <head>
-	{% block extra_head %}
+    {% block styles %}
+    {% include "wedesign/base_head.html" %}
+    {% endblock %}
+    {% block extra_head %}
     <title>{% block title %}{% endblock %}</title>
 
     <style type="text/css" media="all">{% block extrastyles %}{% endblock %}</style>
-	{% endblock %}
+    {% endblock %}
 </head>
 <body>
-	<!-- header -->
+    <!-- header -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -71,12 +74,12 @@ Released under the MIT license
         </div>
     </nav>
 
-	<div id="main">
-		<!-- content -->
-		<div id="content">
-		<h1>{% block content_title %}{% endblock %}</h1>
-		{% block content %}{% endblock %}		
-		</div>
-	</div>
+    <div id="main">
+        <!-- content -->
+        <div id="content">
+        <h1>{% block content_title %}{% endblock %}</h1>
+        {% block content %}{% endblock %}
+        </div>
+    </div>
 </body>
 </html>
