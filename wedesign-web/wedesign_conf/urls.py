@@ -13,7 +13,7 @@ import registration.views
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/register', registration.views.register, name="register"),
-
+    path('accounts/edit', registration.views.account_change, name="account_change"),
     path('admin/', admin.site.urls),
 
     path('', include('wedesign.urls'))

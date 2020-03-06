@@ -11,6 +11,7 @@ from crispy_forms.layout import Layout, Submit
 from django import forms
 from django.contrib.auth import authenticate, get_user_model, login
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 
 from wedesign.layout import Panel
@@ -47,6 +48,7 @@ class LoginForm(AuthenticationForm):
                 self.confirm_login_allowed(self.user_cache)
 
         return self.cleaned_data
+
 
 class CreateProfileForm(forms.Form):
     username = forms.SlugField(
@@ -166,3 +168,93 @@ class CreateProfileForm(forms.Form):
 
         login_user = authenticate(username=user.username, password=self.cleaned_data["password"])
         login(request, login_user)
+
+
+class ChangeProfileForm(forms.Form):
+    username = forms.SlugField(
+        required=True,
+        widget=forms.TextInput,
+        label="Username",
+        max_length=20
+    )
+
+    first_name = forms.CharField(
+        widget=forms.TextInput,
+        required=False,
+        label="First name",
+        max_length=254
+    )
+
+    last_name = forms.CharField(
+        widget=forms.TextInput,
+        required=False,
+        label="Last name",
+        max_length=254
+    )
+
+    email = forms.EmailField(
+        required=True,
+        widget=forms.EmailInput,
+        label="E-Mail address",
+        max_length=254
+    )
+
+    password = forms.CharField(
+        label="Your Password",
+        widget=forms.PasswordInput,
+        help_text="Enter your current password to verify your changes",
+        max_length=254
+    )
+
+    def __init__(self, request=None, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.request = request
+        user = self.request.user
+
+        self.fields["username"].initial = user.username
+        self.fields["first_name"].initial = user.first_name
+        self.fields["last_name"].initial = user.last_name
+        self.fields["email"].initial = user.email
+
+    def clean(self):
+        password = self.cleaned_data.get('password')
+
+        if password:
+            auth = authenticate(username=self.request.user.username,
+                                password=password)
+
+            if auth is None:
+                raise forms.ValidationError(
+                    "Wrong password",
+                    code='invalid_login',
+                    params={'password': self.fields["password"].label},
+                )
+
+        username = self.cleaned_data.get('username')
+
+        if username:
+            if username != self.request.user.username:
+                if User.objects.filter(username=username).exists():
+                    raise forms.ValidationError(
+                        "Username already in use",
+                        params={'username': "username"})
+
+        email = self.cleaned_data.get("email")
+        if email:
+            if email != self.request.user.email:
+                if User.objects.filter(email=email).exists():
+                    raise forms.ValidationError(
+                        "E-Mail address already in use",
+                        params={'email': "email"})
+
+        return self.cleaned_data
+
+    def save(self):
+        u = self.request.user
+
+        u.username = self.cleaned_data.get('username')
+        u.email = self.cleaned_data.get('email')
+        u.first_name = self.cleaned_data.get('first_name')
+        u.last_name = self.cleaned_data.get('last_name')
+        u.save()
