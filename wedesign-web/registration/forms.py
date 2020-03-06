@@ -136,18 +136,11 @@ class CreateProfileForm(forms.Form):
                     params={'password': "Password"})
 
         email = self.cleaned_data.get("email")
-        email2 = self.cleaned_data.get("email2")
 
-        if email and email2:
-            if email != email2:
-                raise forms.ValidationError(
-                    "The mail addresses mismatch",
-                    params={'email': "email"})
-
-            if get_user_model().objects.filter(email=email).exists():
-                raise forms.ValidationError(
-                    "E-Mail address already in use",
-                    params={'email': "email"})
+        if get_user_model().objects.filter(email=email).exists():
+            raise forms.ValidationError(
+                "E-Mail address already in use",
+                params={'email': "email"})
 
         captcha = self.cleaned_data.get("captcha")
 
