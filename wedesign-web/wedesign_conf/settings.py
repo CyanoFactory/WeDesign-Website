@@ -19,17 +19,18 @@ from .settings_private import *
 
 # Application definition
 
+# registration must be first otherwise admin overwrites "logged_out.html"
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'registration',
+
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'registration',
     'wedesign-web',
-
     'crispy_forms',
     'wedesign'
 ]
