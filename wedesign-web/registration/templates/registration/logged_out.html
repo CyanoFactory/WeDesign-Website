@@ -13,14 +13,16 @@ Released under the MIT license
 {% block action_icons %}{% endblock %}
 
 
-{% block head %}
+{% block extra_head %}
 {{ block.super }}
-<meta http-equiv="refresh" content="1; URL={% url "wedesign:index" %}">
+<meta http-equiv="refresh" content="2; URL={% url "wedesign:index" %}">
 
 {% endblock %}
 
 {% block content %}
-<div class="col-md-6">
+<div class="alert alert-info" role="alert">
 You have successfully logged out.
+<br/><br/>
+<a href="{% url "wedesign:index" %}" class="alert-link">Return to the model list</a>
 </div>
 {% endblock %}

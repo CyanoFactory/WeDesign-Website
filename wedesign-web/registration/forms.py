@@ -23,6 +23,18 @@ class LoginForm(AuthenticationForm):
 
         self.fields['username'].label = "Username or Mail"
 
+        self.helper = FormHelper()
+        self.helper.layout = Layout(
+            Panel(
+                'Login',
+                'username',
+                'password',
+            ),
+            FormActions(
+                Submit('submit', 'Login')
+            )
+        )
+
     def clean(self):
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
@@ -208,6 +220,21 @@ class ChangeProfileForm(forms.Form):
 
     def __init__(self, request=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.helper = FormHelper()
+        self.helper.layout = Layout(
+            Panel(
+                'Account information',
+                'username',
+                'first_name',
+                'last_name',
+                'email',
+                'password'
+            ),
+            FormActions(
+                Submit('submit', 'Save changes')
+            )
+        )
 
         self.request = request
         user = self.request.user
